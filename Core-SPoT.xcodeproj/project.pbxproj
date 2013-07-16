@@ -18,7 +18,6 @@
 		F9B762CA1794DC2000BFEBDB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B762C91794DC2000BFEBDB /* Default-568h@2x.png */; };
 		F9B762CD1794DC2000BFEBDB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B762CB1794DC2000BFEBDB /* MainStoryboard_iPhone.storyboard */; };
 		F9B762D01794DC2000BFEBDB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B762CE1794DC2000BFEBDB /* MainStoryboard_iPad.storyboard */; };
-		F9B762D31794DC2000BFEBDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B762D21794DC2000BFEBDB /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +36,6 @@
 		F9B762C91794DC2000BFEBDB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9B762CC1794DC2000BFEBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		F9B762CF1794DC2000BFEBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		F9B762D11794DC2000BFEBDB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9B762D21794DC2000BFEBDB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +82,8 @@
 		F9B762B91794DC2000BFEBDB /* Core-SPoT */ = {
 			isa = PBXGroup;
 			children = (
-				F9B762C21794DC2000BFEBDB /* AppDelegate.h */,
-				F9B762C31794DC2000BFEBDB /* AppDelegate.m */,
 				F9B762CB1794DC2000BFEBDB /* MainStoryboard_iPhone.storyboard */,
 				F9B762CE1794DC2000BFEBDB /* MainStoryboard_iPad.storyboard */,
-				F9B762D11794DC2000BFEBDB /* ViewController.h */,
-				F9B762D21794DC2000BFEBDB /* ViewController.m */,
 				F9B762BA1794DC2000BFEBDB /* Supporting Files */,
 			);
 			path = "Core-SPoT";
@@ -99,6 +92,8 @@
 		F9B762BA1794DC2000BFEBDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9B762C21794DC2000BFEBDB /* AppDelegate.h */,
+				F9B762C31794DC2000BFEBDB /* AppDelegate.m */,
 				F9B762BB1794DC2000BFEBDB /* Core-SPoT-Info.plist */,
 				F9B762BC1794DC2000BFEBDB /* InfoPlist.strings */,
 				F9B762BF1794DC2000BFEBDB /* main.m */,
@@ -179,7 +174,6 @@
 			files = (
 				F9B762C01794DC2000BFEBDB /* main.m in Sources */,
 				F9B762C41794DC2000BFEBDB /* AppDelegate.m in Sources */,
-				F9B762D31794DC2000BFEBDB /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
