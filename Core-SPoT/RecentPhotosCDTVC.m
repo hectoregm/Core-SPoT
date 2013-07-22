@@ -15,7 +15,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (!self.managedObjectContext) [self openDB];
+    if (!self.managedObjectContext) {
+        [self openDB];
+    } else {
+        [self performFetch];
+    }
 }
 
 - (void)openDB
@@ -32,8 +36,7 @@
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
         request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"accessed_at" ascending:NO]];
         request.predicate = [NSPredicate predicateWithFormat:@"accessed_at != nil"];
-        request.fetchLimit = 5;
-        
+        [request setFetchLimit:20];
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
         
     } else {

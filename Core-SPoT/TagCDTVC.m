@@ -54,7 +54,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"In viewDidLoad");
     [self.refreshControl addTarget:self
                             action:@selector(refresh)
                   forControlEvents:UIControlEventValueChanged];
@@ -63,7 +62,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"In viewWillAppear");
     if (!self.managedObjectContext) [self openDB];
 }
 
