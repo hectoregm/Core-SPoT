@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gai-3R-JgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="-190"/>
+            <point key="canvasLocation" x="1495" y="539"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rcw-pa-iV9">
@@ -147,6 +147,51 @@
             </objects>
             <point key="canvasLocation" x="534" y="-190"/>
         </scene>
+        <!--Recent PhotosCDTVC - Recents-->
+        <scene sceneID="lsH-GQ-oiJ">
+            <objects>
+                <tableViewController id="RWB-FO-CMd" customClass="RecentPhotosCDTVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OdO-fa-jeL">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" textLabel="lEy-9z-s95" detailTextLabel="5zf-4m-gC7" style="IBUITableViewCellStyleSubtitle" id="UIV-Bp-xRN">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-9z-s95">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-4m-gC7">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="n7q-BH-A7n" kind="push" identifier="setImageURL:" id="s5b-ZP-5mi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RWB-FO-CMd" id="Kic-5U-1Hg"/>
+                            <outlet property="delegate" destination="RWB-FO-CMd" id="94O-eT-php"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Recents" id="dNb-Ih-kes"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9y-GF-sla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="539"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hkm-Ao-P3i">
             <objects>
@@ -159,11 +204,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="nxC-cL-uM2" kind="relationship" relationship="viewControllers" id="xt8-XL-g3A"/>
+                        <segue destination="ulG-LZ-bIy" kind="relationship" relationship="viewControllers" id="jba-qG-Boy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jba-Gt-2rc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8" y="-190"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z7M-LJ-5tZ">
+            <objects>
+                <navigationController id="ulG-LZ-bIy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="fNz-Nm-tbz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n1H-km-cb5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RWB-FO-CMd" kind="relationship" relationship="rootViewController" id="chR-XJ-zIb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Rr-mx-UaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="539"/>
         </scene>
     </scenes>
     <classes>
@@ -185,6 +250,9 @@
         <class className="PhotosByTagCDTVC" superclassName="CoreDataTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotosByTagCDTVC.h"/>
         </class>
+        <class className="RecentPhotosCDTVC" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecentPhotosCDTVC.h"/>
+        </class>
         <class className="TagCDTVC" superclassName="CoreDataTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TagCDTVC.h"/>
         </class>
@@ -197,4 +265,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="s5b-ZP-5mi"/>
+    </inferredMetricsTieBreakers>
 </document>

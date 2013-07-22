@@ -75,7 +75,7 @@ static NSLock *journal_lock;
 
 + (void)manageCacheSize
 {
-    if ([[self cacheJournal] count] >= MAX_CACHE_SIZE) {
+    if ([[self cacheJournal] count] > MAX_CACHE_SIZE) {
         NSLog(@"Cache is full, removing last accessed photo");
         NSError *error;
         NSFileManager *manager = [[NSFileManager alloc] init];

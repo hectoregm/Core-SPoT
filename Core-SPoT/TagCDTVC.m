@@ -10,6 +10,7 @@
 #import "Photo+Flickr.h"
 #import "Tag.h"
 #import "FlickrFetcher.h"
+#import "SharedUIManagedDocument.h"
 
 @implementation TagCDTVC
 
@@ -60,31 +61,44 @@
 {
     [super viewWillAppear:animated];
     NSLog(@"In viewWillAppear");
-    if (!self.managedObjectContext) [self useDocument];
+    if (!self.managedObjectContext) [self openDB];
 }
 
-- (void)useDocument
+- (void)openDB
 {
-    NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    url = [url URLByAppendingPathComponent:@"Photo Document"];
-    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
-    if(![[NSFileManager defaultManager] fileExistsAtPath:[url path]]) {
-        [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
-            if (success) {
-                self.managedObjectContext = document.managedObjectContext;
-                [self refresh];
-            }
-        }];
-    } else if (document.documentState == UIDocumentStateClosed) {
-        [document openWithCompletionHandler:^(BOOL success) {
-            if (success) {
-                self.managedObjectContext = document.managedObjectContext;
-            }
-        }];
-    } else {
+    [[SharedUIManagedDocument sharedDocument] performWithDocument:^(UIManagedDocument *document, BOOL refresh) {
         self.managedObjectContext = document.managedObjectContext;
-    }
+
+        if (refresh) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self refresh];
+            });
+        }
+    }];
 }
+//
+//- (void)useDocument
+//{
+//    NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+//    url = [url URLByAppendingPathComponent:@"Photo Document"];
+//    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
+//    if(![[NSFileManager defaultManager] fileExistsAtPath:[url path]]) {
+//        [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
+//            if (success) {
+//                self.managedObjectContext = document.managedObjectContext;
+//                [self refresh];
+//            }
+//        }];
+//    } else if (document.documentState == UIDocumentStateClosed) {
+//        [document openWithCompletionHandler:^(BOOL success) {
+//            if (success) {
+//                self.managedObjectContext = document.managedObjectContext;
+//            }
+//        }];
+//    } else {
+//        self.managedObjectContext = document.managedObjectContext;
+//    }
+//}
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

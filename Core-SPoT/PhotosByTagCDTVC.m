@@ -34,6 +34,7 @@
                 [segue.destinationViewController performSelector:@selector(setImageURL:)
                                                       withObject:[[NSURL alloc] initWithString:photo.imageURL]];
                 [segue.destinationViewController setTitle:photo.title];
+                photo.accessed_at = [NSDate date];
             }
         }
     }
