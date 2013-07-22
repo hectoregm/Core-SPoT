@@ -7,6 +7,9 @@
 //
 
 #import "ImageCDTVC.h"
+#import "FlickrFetcher.h"
+#import "NetworkActivity.h"
+#import "SharedUIManagedDocument.h"
 
 @implementation ImageCDTVC
 
@@ -63,13 +66,31 @@
     }
 }
 
+- (void)getThumbnail:(Photo *)photo forCell:(UITableViewCell *)cell
+{
+    if (!photo.thumbnailData) {
+        dispatch_queue_t flickrQ = dispatch_queue_create("ImageDownloader", DISPATCH_QUEUE_SERIAL);
+        dispatch_async(flickrQ, ^{
+            [NetworkActivity startActivity];
+            NSData *imageData = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:photo.thumbnailURL]];
+            [NetworkActivity stopActivity];
+            photo.thumbnailData = imageData;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageView.image = [[UIImage alloc] initWithData:imageData];
+            });
+        });
+    } else {
+        cell.imageView.image = [[UIImage alloc] initWithData:photo.thumbnailData];
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Photo"];
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = photo.title;
     cell.detailTextLabel.text = photo.subtitle;
-    
+    [self getThumbnail:photo forCell:cell];
     return cell;
 }
 

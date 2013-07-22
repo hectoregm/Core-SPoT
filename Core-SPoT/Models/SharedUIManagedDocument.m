@@ -50,4 +50,13 @@ static SharedUIManagedDocument *_sharedInstance;
     }
 }
 
+- (void)saveDocument
+{
+    [self.document saveToURL:self.document.fileURL
+            forSaveOperation:UIDocumentSaveForOverwriting
+           completionHandler:^(BOOL success) {
+               if (!success) NSLog(@"failed to save document %@", self.document.localizedName);
+    }];
+}
+
 @end

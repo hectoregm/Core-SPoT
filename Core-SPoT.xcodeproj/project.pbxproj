@@ -13,14 +13,14 @@
 		F94F04FF179C5CD900469C2A /* NetworkActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F04FE179C5CD900469C2A /* NetworkActivity.m */; };
 		F94F0502179C5D3100469C2A /* FlickrPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0501179C5D3100469C2A /* FlickrPhotoCache.m */; };
 		F94F050B179C5F9A00469C2A /* Core-SPoT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F94F0509179C5F9A00469C2A /* Core-SPoT.xcdatamodeld */; };
-		F94F0514179C64C400469C2A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0513179C64C400469C2A /* Photo.m */; };
-		F94F0517179C64C400469C2A /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0516179C64C400469C2A /* Tag.m */; };
 		F94F051A179C685500469C2A /* Photo+Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0519179C685500469C2A /* Photo+Flickr.m */; };
 		F94F051D179C6F7600469C2A /* Tag+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F051C179C6F7500469C2A /* Tag+Create.m */; };
 		F94F0520179C749200469C2A /* TagCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F051F179C749100469C2A /* TagCDTVC.m */; };
 		F94F0522179C9CB700469C2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F94F0521179C9CB700469C2A /* CoreData.framework */; };
 		F94F0528179CA5B500469C2A /* PhotosByTagCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0527179CA5B400469C2A /* PhotosByTagCDTVC.m */; };
 		F9654D8A179CE0C6005A7023 /* ImageCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9654D89179CE0C6005A7023 /* ImageCDTVC.m */; };
+		F9654D8D179CE728005A7023 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9654D8C179CE728005A7023 /* Photo.m */; };
+		F9654D90179CE728005A7023 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = F9654D8F179CE728005A7023 /* Tag.m */; };
 		F9771456179CC1C5006D17B9 /* RecentPhotosCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */; };
 		F9771459179CC494006D17B9 /* SharedUIManagedDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F9771458179CC494006D17B9 /* SharedUIManagedDocument.m */; };
 		F9B762B41794DC2000BFEBDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B762B31794DC2000BFEBDB /* UIKit.framework */; };
@@ -49,10 +49,6 @@
 		F94F0500179C5D3100469C2A /* FlickrPhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrPhotoCache.h; path = Models/FlickrPhotoCache.h; sourceTree = "<group>"; };
 		F94F0501179C5D3100469C2A /* FlickrPhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrPhotoCache.m; path = Models/FlickrPhotoCache.m; sourceTree = "<group>"; };
 		F94F050A179C5F9A00469C2A /* Core-SPoT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Core-SPoT.xcdatamodel"; sourceTree = "<group>"; };
-		F94F0512179C64C400469C2A /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Models/Photo.h; sourceTree = "<group>"; };
-		F94F0513179C64C400469C2A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Models/Photo.m; sourceTree = "<group>"; };
-		F94F0515179C64C400469C2A /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = Models/Tag.h; sourceTree = "<group>"; };
-		F94F0516179C64C400469C2A /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = Models/Tag.m; sourceTree = "<group>"; };
 		F94F0518179C685500469C2A /* Photo+Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Flickr.h"; sourceTree = "<group>"; };
 		F94F0519179C685500469C2A /* Photo+Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Flickr.m"; sourceTree = "<group>"; };
 		F94F051B179C6F7500469C2A /* Tag+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Tag+Create.h"; path = "Models/Tag+Create.h"; sourceTree = "<group>"; };
@@ -64,6 +60,10 @@
 		F94F0529179CAAEE00469C2A /* TagCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagCDTVC.h; sourceTree = "<group>"; };
 		F9654D88179CE0C6005A7023 /* ImageCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCDTVC.h; sourceTree = "<group>"; };
 		F9654D89179CE0C6005A7023 /* ImageCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCDTVC.m; sourceTree = "<group>"; };
+		F9654D8B179CE728005A7023 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Models/Photo.h; sourceTree = "<group>"; };
+		F9654D8C179CE728005A7023 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Models/Photo.m; sourceTree = "<group>"; };
+		F9654D8E179CE728005A7023 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = Models/Tag.h; sourceTree = "<group>"; };
+		F9654D8F179CE728005A7023 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = Models/Tag.m; sourceTree = "<group>"; };
 		F9771454179CC1C5006D17B9 /* RecentPhotosCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotosCDTVC.h; sourceTree = "<group>"; };
 		F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosCDTVC.m; sourceTree = "<group>"; };
 		F9771457179CC494006D17B9 /* SharedUIManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedUIManagedDocument.h; path = Models/SharedUIManagedDocument.h; sourceTree = "<group>"; };
@@ -113,14 +113,14 @@
 		F94F04FC179C5C5F00469C2A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F94F0512179C64C400469C2A /* Photo.h */,
-				F94F0513179C64C400469C2A /* Photo.m */,
+				F9654D8E179CE728005A7023 /* Tag.h */,
+				F9654D8F179CE728005A7023 /* Tag.m */,
+				F9654D8B179CE728005A7023 /* Photo.h */,
+				F9654D8C179CE728005A7023 /* Photo.m */,
 				F94F0518179C685500469C2A /* Photo+Flickr.h */,
 				F94F0519179C685500469C2A /* Photo+Flickr.m */,
 				F94F051B179C6F7500469C2A /* Tag+Create.h */,
 				F94F051C179C6F7500469C2A /* Tag+Create.m */,
-				F94F0515179C64C400469C2A /* Tag.h */,
-				F94F0516179C64C400469C2A /* Tag.m */,
 				F94F0500179C5D3100469C2A /* FlickrPhotoCache.h */,
 				F94F0501179C5D3100469C2A /* FlickrPhotoCache.m */,
 				F94F04FD179C5CD900469C2A /* NetworkActivity.h */,
@@ -275,8 +275,6 @@
 				F94F04FF179C5CD900469C2A /* NetworkActivity.m in Sources */,
 				F94F0502179C5D3100469C2A /* FlickrPhotoCache.m in Sources */,
 				F94F050B179C5F9A00469C2A /* Core-SPoT.xcdatamodeld in Sources */,
-				F94F0514179C64C400469C2A /* Photo.m in Sources */,
-				F94F0517179C64C400469C2A /* Tag.m in Sources */,
 				F94F051A179C685500469C2A /* Photo+Flickr.m in Sources */,
 				F94F051D179C6F7600469C2A /* Tag+Create.m in Sources */,
 				F94F0520179C749200469C2A /* TagCDTVC.m in Sources */,
@@ -284,6 +282,8 @@
 				F9771456179CC1C5006D17B9 /* RecentPhotosCDTVC.m in Sources */,
 				F9771459179CC494006D17B9 /* SharedUIManagedDocument.m in Sources */,
 				F9654D8A179CE0C6005A7023 /* ImageCDTVC.m in Sources */,
+				F9654D8D179CE728005A7023 /* Photo.m in Sources */,
+				F9654D90179CE728005A7023 /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

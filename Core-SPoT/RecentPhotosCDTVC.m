@@ -33,6 +33,7 @@
         request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"accessed_at" ascending:NO]];
         request.predicate = [NSPredicate predicateWithFormat:@"accessed_at != nil"];
         request.fetchLimit = 5;
+        
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
         
     } else {

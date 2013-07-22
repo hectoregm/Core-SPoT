@@ -15,5 +15,6 @@ typedef void (^OnDocumentReady) (UIManagedDocument *document, BOOL refresh);
 
 + (SharedUIManagedDocument *)sharedDocument;
 - (void)performWithDocument:(OnDocumentReady)onDocumentReady;
+- (void)saveDocument;
 
 @end

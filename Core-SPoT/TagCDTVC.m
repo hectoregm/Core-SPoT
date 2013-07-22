@@ -11,6 +11,7 @@
 #import "Tag.h"
 #import "FlickrFetcher.h"
 #import "SharedUIManagedDocument.h"
+#import "NetworkActivity.h"
 
 @implementation TagCDTVC
 
@@ -36,7 +37,9 @@
     [self.refreshControl beginRefreshing];
     dispatch_queue_t fetchQ = dispatch_queue_create("Flickr Fetch", NULL);
     dispatch_async(fetchQ, ^{
+        [NetworkActivity startActivity];
         NSArray *photos = [FlickrFetcher stanfordPhotos];
+        [NetworkActivity stopActivity   ];
         [self.managedObjectContext performBlock:^{
             for (NSDictionary *photo in photos) {
                 [Photo photoWithFlickrInfo:photo inManagedObjectContext:self.managedObjectContext];
