@@ -1,5 +1,5 @@
 //
-//  RecentPhotosCDTVC.h
+//  ImageCDTVC.h
 //  Core-SPoT
 //
 //  Created by Hector Enrique Gomez Morales on 7/21/13.
@@ -7,8 +7,9 @@
 //
 
 #import "CoreDataTableViewController.h"
-#import "ImageCDTVC.h"
+#import "Tag.h"
+#import "Photo.h"
 
-@interface RecentPhotosCDTVC : ImageCDTVC
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@interface ImageCDTVC : CoreDataTableViewController
+
 @end

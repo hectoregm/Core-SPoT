@@ -20,6 +20,7 @@
 		F94F0520179C749200469C2A /* TagCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F051F179C749100469C2A /* TagCDTVC.m */; };
 		F94F0522179C9CB700469C2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F94F0521179C9CB700469C2A /* CoreData.framework */; };
 		F94F0528179CA5B500469C2A /* PhotosByTagCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F94F0527179CA5B400469C2A /* PhotosByTagCDTVC.m */; };
+		F9654D8A179CE0C6005A7023 /* ImageCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9654D89179CE0C6005A7023 /* ImageCDTVC.m */; };
 		F9771456179CC1C5006D17B9 /* RecentPhotosCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */; };
 		F9771459179CC494006D17B9 /* SharedUIManagedDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F9771458179CC494006D17B9 /* SharedUIManagedDocument.m */; };
 		F9B762B41794DC2000BFEBDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B762B31794DC2000BFEBDB /* UIKit.framework */; };
@@ -61,6 +62,8 @@
 		F94F0526179CA5B400469C2A /* PhotosByTagCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosByTagCDTVC.h; sourceTree = "<group>"; };
 		F94F0527179CA5B400469C2A /* PhotosByTagCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosByTagCDTVC.m; sourceTree = "<group>"; };
 		F94F0529179CAAEE00469C2A /* TagCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagCDTVC.h; sourceTree = "<group>"; };
+		F9654D88179CE0C6005A7023 /* ImageCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCDTVC.h; sourceTree = "<group>"; };
+		F9654D89179CE0C6005A7023 /* ImageCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCDTVC.m; sourceTree = "<group>"; };
 		F9771454179CC1C5006D17B9 /* RecentPhotosCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotosCDTVC.h; sourceTree = "<group>"; };
 		F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosCDTVC.m; sourceTree = "<group>"; };
 		F9771457179CC494006D17B9 /* SharedUIManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedUIManagedDocument.h; path = Models/SharedUIManagedDocument.h; sourceTree = "<group>"; };
@@ -162,12 +165,14 @@
 				F9B762CB1794DC2000BFEBDB /* iPhone.storyboard */,
 				F9B762CE1794DC2000BFEBDB /* iPad.storyboard */,
 				F94F0509179C5F9A00469C2A /* Core-SPoT.xcdatamodeld */,
+				F9654D88179CE0C6005A7023 /* ImageCDTVC.h */,
+				F9654D89179CE0C6005A7023 /* ImageCDTVC.m */,
+				F9771454179CC1C5006D17B9 /* RecentPhotosCDTVC.h */,
+				F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */,
 				F94F0526179CA5B400469C2A /* PhotosByTagCDTVC.h */,
 				F94F0527179CA5B400469C2A /* PhotosByTagCDTVC.m */,
 				F94F0529179CAAEE00469C2A /* TagCDTVC.h */,
 				F94F051F179C749100469C2A /* TagCDTVC.m */,
-				F9771454179CC1C5006D17B9 /* RecentPhotosCDTVC.h */,
-				F9771455179CC1C5006D17B9 /* RecentPhotosCDTVC.m */,
 				F94F04F6179C5C0C00469C2A /* ImageViewController.h */,
 				F94F04F7179C5C0C00469C2A /* ImageViewController.m */,
 				F94F04F9179C5C3A00469C2A /* CoreDataTableViewController.h */,
@@ -278,6 +283,7 @@
 				F94F0528179CA5B500469C2A /* PhotosByTagCDTVC.m in Sources */,
 				F9771456179CC1C5006D17B9 /* RecentPhotosCDTVC.m in Sources */,
 				F9771459179CC494006D17B9 /* SharedUIManagedDocument.m in Sources */,
+				F9654D8A179CE0C6005A7023 /* ImageCDTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
