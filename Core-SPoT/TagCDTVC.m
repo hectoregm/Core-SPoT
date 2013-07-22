@@ -13,14 +13,29 @@
 
 @implementation TagCDTVC
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath;
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        indexPath = [self.tableView indexPathForCell:sender];
+    }
+    
+    if (indexPath) {
+        if ([segue.identifier isEqualToString:@"setTag:"]) {
+            Tag *tag = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            if ([segue.destinationViewController respondsToSelector:@selector(setTag:)]) {
+                [segue.destinationViewController performSelector:@selector(setTag:) withObject:tag];
+            }
+        }
+    }
+}
+
 - (IBAction)refresh
 {
     [self.refreshControl beginRefreshing];
-    NSLog(@"refreshControl: %@", self.refreshControl);
     dispatch_queue_t fetchQ = dispatch_queue_create("Flickr Fetch", NULL);
     dispatch_async(fetchQ, ^{
         NSArray *photos = [FlickrFetcher stanfordPhotos];
-        NSLog(@"In refresh. Context: %@", self.managedObjectContext);
         [self.managedObjectContext performBlock:^{
             for (NSDictionary *photo in photos) {
                 [Photo photoWithFlickrInfo:photo inManagedObjectContext:self.managedObjectContext];
@@ -50,21 +65,14 @@
 
 - (void)useDocument
 {
-    NSLog(@"In use Document");
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     url = [url URLByAppendingPathComponent:@"Photo Document"];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
-    NSLog(@"Got Document: %@", document);
     if(![[NSFileManager defaultManager] fileExistsAtPath:[url path]]) {
-        NSLog(@"Creating Document");
         [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
             if (success) {
-                NSLog(@"Document: %@", document);
-                NSLog(@"Document Context: %@", document.managedObjectContext);
                 self.managedObjectContext = document.managedObjectContext;
                 [self refresh];
-            } else {
-                NSLog(@"Error!!!!");
             }
         }];
     } else if (document.documentState == UIDocumentStateClosed) {

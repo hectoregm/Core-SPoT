@@ -1,5 +1,5 @@
 //
-//  TagCDTVC.h
+//  PhotosByTagCDTVC.h
 //  Core-SPoT
 //
 //  Created by Hector Enrique Gomez Morales on 7/21/13.
@@ -9,6 +9,6 @@
 #import "CoreDataTableViewController.h"
 #import "Tag.h"
 
-@interface TagCDTVC : CoreDataTableViewController
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@interface PhotosByTagCDTVC : CoreDataTableViewController
+@property (nonatomic, strong) Tag *tag;
 @end
